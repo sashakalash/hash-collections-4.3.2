@@ -44,12 +44,12 @@ public class Student {
             return false;
         }
         Student altStudent = (Student) obj;
-        return this.studentId == altStudent.studentId;
+        return getStudentId().equals(altStudent.getStudentId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(studentId, name, group);
+        return Objects.hash(studentId);
     }
 
     @Override

@@ -18,9 +18,10 @@ public class Main {
             if ("end".equals(input)) {
                 break;
             }
-            String name = input.split(", ")[0];
-            String group = input.split(", ")[1];
-            String studentId = input.split(", ")[2];
+            String[] splittedInput = input.split(", ");
+            String name = splittedInput[0];
+            String group = splittedInput[1];
+            String studentId = splittedInput[2];
             Student student = new Student(name, group, studentId);
             while (students.contains(student)) {
                 System.out.println("Студент с данным номером студенческого билета уже зарегистрирован в системе! Повторите ввод");
